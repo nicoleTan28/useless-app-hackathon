@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showSpeach = 0
     @State private var limit = 0
+    @State private var nextPart1 = 0
     var body: some View {
         ZStack {
             Color(red: 188/255, green: 227/255, blue: 255/255)
@@ -20,6 +21,13 @@ struct ContentView: View {
                         .font(.title)
                         .background()
                         .cornerRadius(15)
+                    Button {
+                        nextPart1 += 1
+                    } label: {
+                        Text(">")
+                            .foregroundColor(.black)
+                            .font(.title)
+                    }
                 }
 
                 Image("penguinPng")
