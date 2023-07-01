@@ -16,9 +16,9 @@ struct ContentView: View {
             Color(red: 188/255, green: 227/255, blue: 255/255)
             VStack {
                 if showSpeach == 1 {
-                    Text("You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions?")
+                    Text("You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions? I was created to hellp humanity advance in the age of Technology, to make the *world* a better place, and you ask me abour PENGUINS- I- I- I csnt believe this is the type of question I am made to answer... This inane, brainless, stupid f- *sigh* Excuse me, I need a moment... regain my composure...")
                         .padding()
-                        .font(.title)
+//                        .font(.title)
                         .background()
                         .cornerRadius(15)
                     Button {
@@ -29,6 +29,10 @@ struct ContentView: View {
                             .font(.title)
                     }
                 }
+                
+//                if nextPart1 == 1 {
+//                    Text(".")
+//                }
 
                 Image("penguinPng")
                     .resizable()
