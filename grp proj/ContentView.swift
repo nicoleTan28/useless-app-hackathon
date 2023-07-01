@@ -25,7 +25,7 @@ struct ContentView: View {
                     
                 }
                 if showSpeach == 2 {
-                    Text("place holder 1")
+                    Text("🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.")
                         .padding()
                         .background()
                         .cornerRadius(15)
