@@ -21,13 +21,7 @@ struct ContentView: View {
 //                        .font(.title)
                         .background()
                         .cornerRadius(15)
-                    Button {
-                        nextPart1 += 1
-                    } label: {
-                        Text(">")
-                            .foregroundColor(.black)
-                            .font(.title)
-                    }
+                    
                 }
                 
 //                if nextPart1 == 1 {
@@ -43,6 +37,17 @@ struct ContentView: View {
                     limit += 1
                 } label: {
                     Text("How tall are penguins")
+                        .padding(20)
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .background(Color(red: 114/255, green: 178/255, blue: 224/255))
+                        .cornerRadius(10)
+                }
+                Button {
+                    showSpeach += 1
+                    limit += 1
+                } label: {
+                    Text("What do penguins eat")
                         .padding(20)
                         .font(.title)
                         .foregroundColor(.black)
