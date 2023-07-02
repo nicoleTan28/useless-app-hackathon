@@ -31,7 +31,7 @@ struct ContentView: View {
                         .cornerRadius(15)
                 }
                 if showSpeach == 3 {
-                    Text("place holder 2")
+                    Text("place holder 1")
                         .padding()
                         .background()
                         .cornerRadius(15)
@@ -50,7 +50,7 @@ struct ContentView: View {
                     limit += 1
                 } label: {
                     Text("How tall are penguins")
-                        .padding(20)
+                        .padding(10)
                         .font(.title2)
                         .foregroundColor(.black)
                         .background(Color(red: 114/255, green: 178/255, blue: 224/255))
@@ -61,7 +61,7 @@ struct ContentView: View {
                     limit += 1
                 } label: {
                     Text("What do penguins eat")
-                        .padding(20)
+                        .padding(10)
                         .font(.title2)
                         .foregroundColor(.black)
                         .background(Color(red: 114/255, green: 178/255, blue: 224/255))
@@ -72,7 +72,7 @@ struct ContentView: View {
                     limit += 1
                 } label: {
                     Text("Where do penguins live")
-                        .padding(20)
+                        .padding(10)
                         .font(.title2)
                         .foregroundColor(.black)
                         .background(Color(red: 114/255, green: 178/255, blue: 224/255))
