@@ -8,39 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showSpeach = 0
+    @State private var text = ["You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions? I was created to hellp humanity advance in the age of Technology, to make the *world* a better place, and you ask me abour PENGUINS- I- I- I cant believe this is the type of question I am made to answer... This inane, brainless, stupid f- *sigh* Excuse me, I need a moment... regain my composure...", "🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.", "placeholder"]
+    @State private var showSpeech = 0
     @State private var limit = 0
     @State private var nextPart1 = 0
     @State private var image = ["penguinPng","penguinAAA"]
     @State private var imageIndex = 0
+    
+    func loopText(){
+        //this func is to ensure that the text is looped and that the speech index is in range
+        showSpeech += 1
+        limit += 1
+        
+        if limit > 3{
+            limit = 0
+            showSpeech = 0
+        }
+        
+        if showSpeech == text.count{
+            showSpeech = 0
+        }
+    }
     
 //    @State private var penguinSize = 200
     var body: some View {
         ZStack {
             Color(red: 188/255, green: 227/255, blue: 255/255)
             VStack {
-                if showSpeach == 1 {
-                    Text("You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions? I was created to hellp humanity advance in the age of Technology, to make the *world* a better place, and you ask me abour PENGUINS- I- I- I cant believe this is the type of question I am made to answer... This inane, brainless, stupid f- *sigh* Excuse me, I need a moment... regain my composure...")
+                    Text(text[showSpeech])
                         .padding()
 //                        .font(.title)
                         .background()
                         .cornerRadius(15)
                     
-                }
     
-                if showSpeach == 2 {
-                    Text("🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.")
-                        .padding()
-                        .background()
-                        .cornerRadius(15)
-                }
-                if showSpeach == 3 {
-                    Text("place holder 1")
-                        .padding()
-                        .background()
-                        .cornerRadius(15)
-                }
-                
+               
 //                if nextPart1 == 1 {
 //                    Text(".")
 //                }
@@ -50,13 +52,7 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 200)
                 Button {
-                    showSpeach += 1
-                    limit += 1
-                    
-                    if limit > 3{
-                        limit = 0
-                        showSpeach = 0
-                    }
+                    loopText()
                     
                 } label: {
                     Text("How tall are penguins")
@@ -67,13 +63,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 Button {
-                    showSpeach += 1
-                    limit += 1
-                    
-                    if limit > 3{
-                        limit = 0
-                        showSpeach = 0
-                    }
+                    loopText()
                     
                 } label: {
                     Text("What do penguins eat")
@@ -84,13 +74,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 Button {
-                    showSpeach += 1
-                    limit += 1
-                    
-                    if limit > 3{
-                        limit = 0
-                        showSpeach = 0
-                    }
+                    loopText()
                     
                 } label: {
                     Text("Where do penguins live")
