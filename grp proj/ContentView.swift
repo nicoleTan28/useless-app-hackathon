@@ -11,6 +11,8 @@ struct ContentView: View {
     @State private var showSpeach = 0
     @State private var limit = 0
     @State private var nextPart1 = 0
+    @State private var image = "penguinPng"
+    
 //    @State private var penguinSize = 200
     var body: some View {
         ZStack {
@@ -24,6 +26,7 @@ struct ContentView: View {
                         .cornerRadius(15)
                     
                 }
+    
                 if showSpeach == 2 {
                     Text("🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.")
                         .padding()
@@ -40,8 +43,8 @@ struct ContentView: View {
 //                if nextPart1 == 1 {
 //                    Text(".")
 //                }
-
-                Image("penguinPng")
+              
+                Image(image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200)
@@ -98,6 +101,15 @@ struct ContentView: View {
                 }
             }
             .padding()
+        }
+        .onTapGesture {
+            if limit > 0{
+                image = "penguinAAA"
+            }
+            if limit == 0 {
+                image = "penguinPng"
+            }
+            
         }
     }
     
