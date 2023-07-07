@@ -48,6 +48,12 @@ struct ContentView: View {
                 Button {
                     showSpeach += 1
                     limit += 1
+                    
+                    if limit > 3{
+                        limit = 0
+                        showSpeach = 0
+                    }
+                    
                 } label: {
                     Text("How tall are penguins")
                         .padding(10)
@@ -59,6 +65,12 @@ struct ContentView: View {
                 Button {
                     showSpeach += 1
                     limit += 1
+                    
+                    if limit > 3{
+                        limit = 0
+                        showSpeach = 0
+                    }
+                    
                 } label: {
                     Text("What do penguins eat")
                         .padding(10)
@@ -70,6 +82,12 @@ struct ContentView: View {
                 Button {
                     showSpeach += 1
                     limit += 1
+                    
+                    if limit > 3{
+                        limit = 0
+                        showSpeach = 0
+                    }
+                    
                 } label: {
                     Text("Where do penguins live")
                         .padding(10)
