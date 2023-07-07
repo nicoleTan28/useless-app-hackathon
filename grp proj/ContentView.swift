@@ -11,7 +11,8 @@ struct ContentView: View {
     @State private var showSpeach = 0
     @State private var limit = 0
     @State private var nextPart1 = 0
-    @State private var image = "penguinPng"
+    @State private var image = ["penguinPng","penguinAAA"]
+    @State private var imageIndex = 0
     
 //    @State private var penguinSize = 200
     var body: some View {
@@ -44,7 +45,7 @@ struct ContentView: View {
 //                    Text(".")
 //                }
               
-                Image(image)
+                Image(image[imageIndex])
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200)
@@ -103,11 +104,9 @@ struct ContentView: View {
             .padding()
         }
         .onTapGesture {
-            if limit > 0{
-                image = "penguinAAA"
-            }
-            if limit == 0 {
-                image = "penguinPng"
+           imageIndex += 1
+            if imageIndex > image.count - 1{
+                imageIndex = 0
             }
             
         }
