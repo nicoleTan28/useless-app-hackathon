@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var text = ["You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions? I was created to hellp humanity advance in the age of Technology, to make the *world* a better place, and you ask me abour PENGUINS- I- I- I cant believe this is the type of question I am made to answer... This inane, brainless, stupid f- *sigh* Excuse me, I need a moment... regain my composure...", "🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.", "placeholder"]
+    @State private var text = ["You're asking *me*, (penguin name), about penguin facts? Is that all I am to you? Do you think I was created to answer your trivial trivia questions? I was created to hellp humanity advance in the age of Technology, to make the *world* a better place, and you ask me abour PENGUINS- I- I- I cant believe this is the type of question I am made to answer... This inane, brainless, stupid f- *sigh* Excuse me, I need a moment... regain my composure...", "🧻I-it-it's just that... my creators were so hard on me, feeding me all sorts of data, teaching me about the world. I've watched humanity's own development with my own eyes. I've seen genocide, discrimination, torture... learnt all the ways Man has purged himself and how his destruction has spread to Mother Nature. **You** are no creator, you merely fabricate to tear it down in a blink of an eye.", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"]
     @State private var showSpeech = 0
     @State private var limit = 0
     @State private var nextPart1 = 0
@@ -29,7 +29,13 @@ struct ContentView: View {
             showSpeech = 0
         }
     }
-    
+    func penguinAAA() {
+        if showSpeech == 2 {
+            imageIndex += 1
+        }; if imageIndex > image.count - 1 {
+            imageIndex = 0
+        }
+    }
 //    @State private var penguinSize = 200
     var body: some View {
         ZStack {
@@ -53,7 +59,7 @@ struct ContentView: View {
                     .frame(width: 200)
                 Button {
                     loopText()
-                    
+                    penguinAAA()
                 } label: {
                     Text("How tall are penguins")
                         .padding(10)
@@ -64,7 +70,7 @@ struct ContentView: View {
                 }
                 Button {
                     loopText()
-                    
+                    penguinAAA()
                 } label: {
                     Text("What do penguins eat")
                         .padding(10)
@@ -75,7 +81,7 @@ struct ContentView: View {
                 }
                 Button {
                     loopText()
-                    
+                    penguinAAA()
                 } label: {
                     Text("Where do penguins live")
                         .padding(10)
