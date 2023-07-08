@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var nextPart1 = 0
     @State private var image = ["penguinPng","penguinAAA"]
     @State private var imageIndex = 0
+//    @State private var rotate = 0
     
     func loopText(){
         //this func is to ensure that the text is looped and that the speech index is in range
@@ -93,13 +94,13 @@ struct ContentView: View {
             }
             .padding()
         }
-        .onTapGesture {
-           imageIndex += 1
-            if imageIndex > image.count - 1{
-                imageIndex = 0
-            }
-            
-        }
+//        .onTapGesture {
+//           imageIndex += 1
+//            if imageIndex > image.count - 1{
+//                imageIndex = 0
+//            }
+//
+//        }
     }
     
     struct ContentView_Previews: PreviewProvider {
